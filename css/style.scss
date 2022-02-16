@@ -14,6 +14,7 @@ body {
 
 html {
     font-size: 25px;
+    scroll-behavior: smooth;
 }
 
 @mixin primary-flex {
@@ -55,30 +56,24 @@ html {
     position: fixed;
     z-index: 100;
 }
-// banner start
 
-.banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/landing.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
+// navbar starts
 
-    // navbar starts
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: $color-white;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid $color-orange;
 
-    nav {
-        position: sticky;
-        z-index: 10;
-        background-color: $color-white;
-        padding: 0.6rem 0;
+    .navbar {
+        @include primary-flex();
+        font-size: 1rem;
 
-        .navbar {
-            @include primary-flex();
-            font-size: 1rem;
-
-            .n-left {
-                font-weight: 600;
-            }
+        .n-left {
+            font-weight: 600;
+            margin-top: 0.2rem;
 
             a {
                 text-decoration: none;
@@ -88,6 +83,10 @@ html {
             a:hover {
                 color: $color-orange;
             }
+        }
+
+        .n-right {
+            // padding-top: 0.3rem;
 
             ul {
                 @include primary-flex();
@@ -98,35 +97,46 @@ html {
                     margin: 0;
                     margin-left: 1rem;
                     padding-bottom: 0.2rem;
+                    padding-top: 0;
 
                     a {
                         font-size: 0.5rem;
                         font-weight: 500;
                         letter-spacing: 0.02rem;
+                        text-decoration: none;
+                        color: $color-black;
+                    }
+
+                    a:hover {
+                        color: $color-orange;
                     }
                 }
             }
 
-            .n-right {
+            .menu-bar {
                 display: none;
-                color: $color-grey;
-                cursor: pointer;
-                transition: 0.2s all ease-in-out;
-            }
-
-            .n-right:hover {
-                color: $color-orange;
             }
         }
     }
+}
 
-    // navbar ends
+// navbar ends
+
+// banner start
+
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/landing.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     // carousel starts
-
     .custom-carousel1 {
-        margin-top: 5rem;
-
         .b-text {
             text-align: center;
 
@@ -152,6 +162,7 @@ html {
             }
         }
     }
+    // carousel ends
 
     .button {
         text-align: center;
@@ -162,16 +173,17 @@ html {
             border: 1px solid white;
             font-size: 0.65rem;
             padding: 0.4rem 0.9rem;
-            transition: 0.2s all ease-in-out;
+            transition: 0.5s all ease-in-out;
         }
 
         a:hover {
-            font-weight: 500;
-            border: 1px solid $color-orange;
+            background-color: rgb(214, 214, 214);
+            color: $color-orange;
+            font-weight: 550;
+            border-radius: 20px;
         }
     }
 
-    // carousel ends
 }
 
 // banner ends
@@ -306,7 +318,10 @@ html {
     width: 100%;
     height: 50vh;
     text-align: center;
-    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     a {
         font-size: 3rem;
@@ -357,10 +372,13 @@ html {
 
         .t-box {
             background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             h5 {
                 margin: 0;
-                padding-top: 4rem;
                 font-size: 0.7rem;
                 color: #363636;
                 letter-spacing: 0.05rem;
@@ -585,12 +603,14 @@ html {
                 border: 1px solid white;
                 font-size: 0.65rem;
                 padding: 0.4rem 0.9rem;
-                transition: 0.2s all ease-in-out;
+                transition: 0.5s all ease-in-out;
             }
 
             a:hover {
-                font-weight: 500;
-                border: 1px solid $color-orange;
+                background-color: rgb(214, 214, 214);
+                color: $color-orange;
+                font-weight: 550;
+                border-radius: 20px;
             }
         }
 
@@ -1023,7 +1043,7 @@ footer {
 
     .footer {
         padding: 1rem 0;
-        
+
         ul {
             display: flex;
             justify-content: center;
@@ -1080,8 +1100,6 @@ footer {
 }
 
 // back-to-top menu ends
-
-
 
 // media query starts4
 

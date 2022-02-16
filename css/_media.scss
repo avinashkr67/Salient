@@ -1,22 +1,10 @@
 // media query
 
-@media only screen and (max-width: 1300px) {
-    .banner {
-        .custom-carousel1 {
-            margin-top: 3rem;
-        }
-    }
-}
-
 @media only screen and (max-width: 1250px) {
     #services-section {
         .services-content {
             align-items: center;
         }
-    }
-
-    .services-video {
-        padding-top: 3rem;
     }
 
     #works-section {
@@ -86,14 +74,6 @@
         p {
             padding: 0.2rem 0rem;
         }
-
-        .team-content {
-            .t-box {
-                h5 {
-                    padding-top: 1rem;
-                }
-            }
-        }
     }
 
     .team-section-box2 {
@@ -150,9 +130,6 @@
     .inner {
         width: 95%;
     }
-}
-
-@media only screen and (max-width: 1050px) {
 }
 
 @media only screen and (max-width: 1000px) {
@@ -225,10 +202,6 @@
     #team-section {
         .team-content {
             .t-box {
-                h5 {
-                    padding-top: 0.5rem;
-                }
-
                 h6 {
                     margin-top: 0.4rem;
                 }
@@ -262,25 +235,80 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .banner {
-        nav {
-            .navbar {
-                .n-center {
+    nav {
+        .navbar {
+            .n-right {
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    transition: 1s ease;
                     display: none;
-                    ul {
-                        justify-content: space-around;
-                        width: 100%;
+
+                    li {
+                        font-size: 2rem;
                         margin: 0;
                         padding: 0;
-                        background-color: $color-white;
-                        opacity: 0.5;
-                        position: absolute;
-                        top: 2.4rem;
-                        left: 0;
+
+                        a {
+                            font-weight: 800;
+                        }
                     }
                 }
-                .n-right {
+
+                .menu-bar {
                     display: block;
+                    width: 28px;
+                    margin-top: 15px;
+                    cursor: pointer;
+
+                    .bar {
+                        height: 4px;
+                        width: 100%;
+                        background-color: grey;
+                        display: block;
+                        border-radius: 20px;
+                        transition: 0.3s ease;
+                    }
+
+                    #bar1 {
+                        transform: translateY(-4px);
+                    }
+
+                    #bar3 {
+                        transform: translateY(4px);
+                    }
+                }
+
+                .icon {
+                    #bar1 {
+                        transform: translateY(4px) rotate(-45deg);
+                        background-color: #fc785d;
+                    }
+
+                    #bar2 {
+                        opacity: 0;
+                    }
+
+                    #bar3 {
+                        transform: translateY(-5px) rotate(45deg);
+                        background-color: #fc785d;
+                    }
+                }
+
+                .change {
+                    background-color: $color-white;
+                    height: 100vh;
+                    margin: 0;
+                    position: absolute;
+                    top: 0.5rem;
+                    left: 0;
+                    opacity: 0.5;
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: -100;
                 }
             }
         }
@@ -360,7 +388,6 @@
             .t-box {
                 h5 {
                     font-size: 0.6rem;
-                    padding-top: 0.2rem;
                 }
 
                 h6 {
@@ -407,7 +434,6 @@
             .t-box {
                 h5 {
                     font-size: 0.6rem;
-                    padding-top: 0rem;
                 }
 
                 h6 {
@@ -473,24 +499,6 @@
 
 @media only screen and (max-width: 650px) {
     .banner {
-        nav {
-            .navbar {
-                .n-center {
-                    ul {
-                        display: block;
-                        text-align: center;
-                        opacity: 0.7;
-
-                        li {
-                            a {
-                                font-size: 0.6rem;
-                                font-weight: 700;
-                            }
-                        }
-                    }
-                }
-            }
-        }
         .custom-carousel1 {
             .b-text {
                 h3 {
@@ -520,18 +528,6 @@
     }
 
     .banner {
-        nav {
-            .navbar {
-                .n-center {
-                    ul {
-                        li {
-                            padding-bottom: 0.4rem;
-                        }
-                    }
-                }
-            }
-        }
-
         .custom-carousel1 {
             .b-text {
                 h3 {
@@ -584,8 +580,6 @@
     }
 
     .services-video {
-        padding-top: 4rem;
-
         a {
             font-size: 2.5rem;
         }
@@ -626,7 +620,6 @@
             .t-box {
                 h5 {
                     font-size: 0.9rem;
-                    padding-top: 2rem;
                 }
 
                 h6 {
@@ -927,9 +920,18 @@
 }
 
 @media only screen and (max-width: 500px) {
+    nav {
+        .navbar {
+            .n-right {
+                .change {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
     .banner {
         .custom-carousel1 {
-            margin-top: 4rem;
             .b-text {
                 h3 {
                     font-size: 1.1rem;
@@ -973,7 +975,6 @@
             .t-box {
                 h5 {
                     font-size: 0.7rem;
-                    padding-top: 0.2rem;
                 }
 
                 h6 {
@@ -992,27 +993,6 @@
 
 @media only screen and (max-width: 450px) {
     .banner {
-        nav {
-            .navbar {
-                font-size: 0.8rem;
-
-                .n-center {
-                    ul {
-                        position: absolute;
-                        top: 2.1rem;
-                        left: 0;
-
-                        li {
-                            padding-bottom: 1rem;
-                        }
-                    }
-                }
-                .n-right {
-                    display: block;
-                }
-            }
-        }
-
         .custom-carousel1 {
             .b-text {
                 h3 {
@@ -1089,8 +1069,8 @@
         }
     }
 
-    .cs-content{
-        p{
+    .cs-content {
+        p {
             width: 100%;
             text-align: center;
             font-size: 0.68rem;
@@ -1133,20 +1113,20 @@
         }
     }
 
-    .subscribe-section-main{
-        #subscribe-section{
-            input[type="email"]{
+    .subscribe-section-main {
+        #subscribe-section {
+            input[type="email"] {
                 width: 90%;
             }
         }
     }
 
-    footer{
-        .footer{
-            ul{
+    footer {
+        .footer {
+            ul {
                 display: block;
 
-                li{
+                li {
                     margin-bottom: 1rem;
                 }
             }
@@ -1155,6 +1135,16 @@
 }
 
 @media only screen and (max-width: 350px) {
+    nav {
+        .navbar {
+            .n-right {
+                .change {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
     .banner {
         .custom-carousel1 {
             .b-text {
@@ -1179,4 +1169,3 @@
         }
     }
 }
-

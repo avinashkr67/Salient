@@ -6,13 +6,11 @@ window.addEventListener("load", function () {
 })
 
 
-// For menubar
-$(document).ready(function () {
-    $('.menu-down').click(function () {
-        $('.n-center').toggle();
-    })
-})
-
+// for menubar
+function onClickMenu() {
+    document.getElementById("menu-button").classList.toggle("icon");
+    document.getElementById("nav-ul").classList.toggle("change");
+}
 
 
 $(document).ready(function () {

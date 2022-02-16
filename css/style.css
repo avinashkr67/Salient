@@ -9,6 +9,7 @@ body {
 
 html {
   font-size: 25px;
+  scroll-behavior: smooth;
 }
 
 .inner {
@@ -37,24 +38,16 @@ html {
   z-index: 100;
 }
 
-.banner {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../img/bg/landing.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/landing.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
-}
-
-.banner nav {
-  position: -webkit-sticky;
-  position: sticky;
+nav {
+  position: fixed;
+  width: 100%;
   z-index: 10;
   background-color: #fff;
   padding: 0.6rem 0;
+  border-bottom: 1px solid #fc785d;
 }
 
-.banner nav .navbar {
+nav .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,20 +59,21 @@ html {
   font-size: 1rem;
 }
 
-.banner nav .navbar .n-left {
+nav .navbar .n-left {
   font-weight: 600;
+  margin-top: 0.2rem;
 }
 
-.banner nav .navbar a {
+nav .navbar .n-left a {
   text-decoration: none;
   color: #363636;
 }
 
-.banner nav .navbar a:hover {
+nav .navbar .n-left a:hover {
   color: #fc785d;
 }
 
-.banner nav .navbar ul {
+nav .navbar .n-right ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,33 +85,50 @@ html {
   margin: 0;
 }
 
-.banner nav .navbar ul li {
+nav .navbar .n-right ul li {
   list-style: none;
   margin: 0;
   margin-left: 1rem;
   padding-bottom: 0.2rem;
+  padding-top: 0;
 }
 
-.banner nav .navbar ul li a {
+nav .navbar .n-right ul li a {
   font-size: 0.5rem;
   font-weight: 500;
   letter-spacing: 0.02rem;
+  text-decoration: none;
+  color: #363636;
 }
 
-.banner nav .navbar .n-right {
-  display: none;
-  color: #494949;
-  cursor: pointer;
-  -webkit-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
-}
-
-.banner nav .navbar .n-right:hover {
+nav .navbar .n-right ul li a:hover {
   color: #fc785d;
 }
 
-.banner .custom-carousel1 {
-  margin-top: 5rem;
+nav .navbar .n-right .menu-bar {
+  display: none;
+}
+
+.banner {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../img/bg/landing.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/landing.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .banner .custom-carousel1 .b-text {
@@ -155,13 +166,15 @@ html {
   border: 1px solid white;
   font-size: 0.65rem;
   padding: 0.4rem 0.9rem;
-  -webkit-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 .banner .button a:hover {
-  font-weight: 500;
-  border: 1px solid #fc785d;
+  background-color: #d6d6d6;
+  color: #fc785d;
+  font-weight: 550;
+  border-radius: 20px;
 }
 
 #about-section {
@@ -323,7 +336,19 @@ html {
   width: 100%;
   height: 50vh;
   text-align: center;
-  padding-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .services-video a {
@@ -383,11 +408,23 @@ html {
 
 #team-section .team-content .t-box {
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #team-section .team-content .t-box h5 {
   margin: 0;
-  padding-top: 4rem;
   font-size: 0.7rem;
   color: #363636;
   letter-spacing: 0.05rem;
@@ -640,13 +677,15 @@ html {
   border: 1px solid white;
   font-size: 0.65rem;
   padding: 0.4rem 0.9rem;
-  -webkit-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 .team-section-box1-inner .team-section-box1 .tsb1-left a:hover {
-  font-weight: 500;
-  border: 1px solid #fc785d;
+  background-color: #d6d6d6;
+  color: #fc785d;
+  font-weight: 550;
+  border-radius: 20px;
 }
 
 .team-section-box1-inner .team-section-box1 .tsb1-right {
@@ -1206,20 +1245,11 @@ footer .footer p a {
   background-color: #fc785d;
 }
 
-@media only screen and (max-width: 1300px) {
-  .banner .custom-carousel1 {
-    margin-top: 3rem;
-  }
-}
-
 @media only screen and (max-width: 1250px) {
   #services-section .services-content {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .services-video {
-    padding-top: 3rem;
   }
   #works-section p {
     text-align: center;
@@ -1256,9 +1286,6 @@ footer .footer p a {
   }
   #team-section p {
     padding: 0.2rem 0rem;
-  }
-  #team-section .team-content .t-box h5 {
-    padding-top: 1rem;
   }
   .team-section-box2 .tsb2-left {
     width: 60%;
@@ -1336,9 +1363,6 @@ footer .footer p a {
 }
 
 @media only screen and (max-width: 850px) {
-  #team-section .team-content .t-box h5 {
-    padding-top: 0.5rem;
-  }
   #team-section .team-content .t-box h6 {
     margin-top: 0.4rem;
   }
@@ -1363,23 +1387,80 @@ footer .footer p a {
 }
 
 @media only screen and (max-width: 800px) {
-  .banner nav .navbar .n-center {
+  nav .navbar .n-right ul {
+    padding: 0;
+    margin: 0;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
     display: none;
   }
-  .banner nav .navbar .n-center ul {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 100%;
+  nav .navbar .n-right ul li {
+    font-size: 2rem;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    opacity: 0.5;
-    position: absolute;
-    top: 2.4rem;
-    left: 0;
   }
-  .banner nav .navbar .n-right {
+  nav .navbar .n-right ul li a {
+    font-weight: 800;
+  }
+  nav .navbar .n-right .menu-bar {
     display: block;
+    width: 28px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  nav .navbar .n-right .menu-bar .bar {
+    height: 4px;
+    width: 100%;
+    background-color: grey;
+    display: block;
+    border-radius: 20px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  nav .navbar .n-right .menu-bar #bar1 {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  nav .navbar .n-right .menu-bar #bar3 {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  nav .navbar .n-right .icon #bar1 {
+    -webkit-transform: translateY(4px) rotate(-45deg);
+            transform: translateY(4px) rotate(-45deg);
+    background-color: #fc785d;
+  }
+  nav .navbar .n-right .icon #bar2 {
+    opacity: 0;
+  }
+  nav .navbar .n-right .icon #bar3 {
+    -webkit-transform: translateY(-5px) rotate(45deg);
+            transform: translateY(-5px) rotate(45deg);
+    background-color: #fc785d;
+  }
+  nav .navbar .n-right .change {
+    background-color: #fff;
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    opacity: 0.5;
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: -100;
   }
   #about-section .about-items .box h5 {
     font-size: 0.8rem;
@@ -1423,7 +1504,6 @@ footer .footer p a {
   }
   #team-section .team-content .t-box h5 {
     font-size: 0.6rem;
-    padding-top: 0.2rem;
   }
   #team-section .team-content .t-box h6 {
     font-size: 0.55rem;
@@ -1451,7 +1531,6 @@ footer .footer p a {
   }
   #team-section .team-content .t-box h5 {
     font-size: 0.6rem;
-    padding-top: 0rem;
   }
   #team-section .team-content .t-box h6 {
     margin-top: 0;
@@ -1491,15 +1570,6 @@ footer .footer p a {
 }
 
 @media only screen and (max-width: 650px) {
-  .banner nav .navbar .n-center ul {
-    display: block;
-    text-align: center;
-    opacity: 0.7;
-  }
-  .banner nav .navbar .n-center ul li a {
-    font-size: 0.6rem;
-    font-weight: 700;
-  }
   .banner .custom-carousel1 .b-text h3 {
     font-size: 1.5rem;
   }
@@ -1514,9 +1584,6 @@ footer .footer p a {
 @media only screen and (max-width: 600px) {
   .inner {
     width: 95%;
-  }
-  .banner nav .navbar .n-center ul li {
-    padding-bottom: 0.4rem;
   }
   .banner .custom-carousel1 .b-text h3 {
     font-size: 1.3rem;
@@ -1552,9 +1619,6 @@ footer .footer p a {
   #services-section .services-content {
     margin-top: 0;
   }
-  .services-video {
-    padding-top: 4rem;
-  }
   .services-video a {
     font-size: 2.5rem;
   }
@@ -1585,7 +1649,6 @@ footer .footer p a {
   }
   #team-section .team-content .t-box h5 {
     font-size: 0.9rem;
-    padding-top: 2rem;
   }
   #team-section .team-content .t-box h6 {
     font-size: 0.6rem;
@@ -1778,8 +1841,8 @@ footer .footer p a {
 }
 
 @media only screen and (max-width: 500px) {
-  .banner .custom-carousel1 {
-    margin-top: 4rem;
+  nav .navbar .n-right .change {
+    width: 40%;
   }
   .banner .custom-carousel1 .b-text h3 {
     font-size: 1.1rem;
@@ -1806,7 +1869,6 @@ footer .footer p a {
   }
   #team-section .team-content .t-box h5 {
     font-size: 0.7rem;
-    padding-top: 0.2rem;
   }
   #team-section .team-content .t-box h6 {
     font-size: 0.5rem;
@@ -1819,20 +1881,6 @@ footer .footer p a {
 }
 
 @media only screen and (max-width: 450px) {
-  .banner nav .navbar {
-    font-size: 0.8rem;
-  }
-  .banner nav .navbar .n-center ul {
-    position: absolute;
-    top: 2.1rem;
-    left: 0;
-  }
-  .banner nav .navbar .n-center ul li {
-    padding-bottom: 1rem;
-  }
-  .banner nav .navbar .n-right {
-    display: block;
-  }
   .banner .custom-carousel1 .b-text h3 {
     font-size: 0.9rem;
   }
@@ -1908,6 +1956,9 @@ footer .footer p a {
 }
 
 @media only screen and (max-width: 350px) {
+  nav .navbar .n-right .change {
+    width: 50%;
+  }
   .banner .custom-carousel1 .b-text h3 {
     font-size: 0.7rem;
   }
