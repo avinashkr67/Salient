@@ -241,8 +241,18 @@
                 ul {
                     padding: 0;
                     margin: 0;
+                    width: 25%;
+                    height: 100vh;
+                    background-color: $color-white;
+                    opacity: 0.8;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    left: -400px;
+                    z-index: -100;
                     transition: 1s ease;
-                    display: none;
 
                     li {
                         font-size: 2rem;
@@ -267,7 +277,7 @@
                         background-color: grey;
                         display: block;
                         border-radius: 20px;
-                        transition: 0.3s ease;
+                        transition: 0.5s ease;
                     }
 
                     #bar1 {
@@ -296,19 +306,8 @@
                 }
 
                 .change {
-                    background-color: $color-white;
-                    height: 100vh;
-                    margin: 0;
                     position: absolute;
-                    top: 0.5rem;
                     left: 0;
-                    opacity: 0.5;
-                    width: 30%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: -100;
                 }
             }
         }
